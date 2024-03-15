@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curry's</title>
+    <style>
+        h1 {
+            border: 10px gold;
+            padding: 20px;
+            background: black;
+            color: gold;
+            text-align: center;
+            font-family: Bradley Hand ITC;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        h2 {
+            border: 10px gold;
+            height: 35px;
+            width: 200px;
+            border-radius: 5px;
+            padding: 10px;
+            background: black;
+            color: gold;
+            font-family: Bradley Hand ITC;
+            margin-left: 12px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        
+
+        .menu-item p {
+            font-family: Trebuchet MS;
+            font-size: x-large;
+            margin: 0;
+            padding-top: 15px;
+        }
+
+        .menu-item input {
+            width: 40px;
+            text-align: left;
+        }
+
+        .menu-item .quantity {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item .quantity input {
+            margin-right: 10px;
+        }
+
+        .menu-item .price {
+            font-weight: bold;
+            
+        }
+        .menu-item label{
+            padding-right: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Curry</h1>
+        <h2>Non-Vegetarian</h2>
+    </header>
+
+    <section>
+        <div class="menu-item">
+            <div>
+                <p>Chicken Curry</p>
+                <div class="quantity">
+                    <label for="qtyChickenCurry">Qty:</label>
+                    <input type="number" min="0" value="0" id="quantityChickenCurry">
+                    <label for="pChickenCurry">Price:</label>
+                    <p class="price" id="priceChickenCurry">₹0.00</p>
+                    <script>
+                        function ChickenCurryPrice(item, quantity) {
+                            const priceElement = document.getElementById(`price${item}`);
+                            const pricePerItem = 250.00; // You can set the price per item as needed
+                            const totalPrice = pricePerItem * quantity;
+                            priceElement.textContent = `₹${totalPrice.toFixed(2)}`;
+                        }
+                
+                        // Add event listener for quantity input changes
+                        document.getElementById('quantityChickenCurry').addEventListener('input', function() {
+                            ChickenCurryPrice('ChickenCurry', this.value);
+                        });
+                    </script>
+                </div>
+            </div>
+            <img src="https://th.bing.com/th/id/OIG1.enL.nckVNUE5Qnh897NF?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Chicken Curry" style="width: 110px;border-radius: 10px;">
+        </div>
+    </section>
+    <section>
+        <div class="menu-item">
+            <div>
+                <p>Mutton Curry</p>
+                <div class="quantity">
+                    <label for="qtyMuttonCurry">Qty:</label>
+                    <input type="number" min="0" value="0" id="quantityMuttonCurry">
+                    <label for="pMuttonCurry">Price:</label>
+                    <p class="price" id="priceMuttonCurry">₹0.00</p>
+                    <script>
+                        function MuttonCurryPrice(item, quantity) {
+                            const priceElement = document.getElementById(`price${item}`);
+                            const pricePerItem = 299.00; // You can set the price per item as needed
+                            const totalPrice = pricePerItem * quantity;
+                            priceElement.textContent = `₹${totalPrice.toFixed(2)}`;
+                        }
+                
+                        // Add event listener for quantity input changes
+                        document.getElementById('quantityMuttonCurry').addEventListener('input', function() {
+                            MuttonCurryPrice('MuttonCurry', this.value);
+                        });
+                    </script>
+                </div>
+            </div>
+            <img src="https://th.bing.com/th/id/OIG4.Q6s2VCv34tMoN7IsHqt0?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Chicken Curry" style="width: 110px;border-radius: 10px;">
+        </div>
+    </section>
+    <section>
+        <div class="menu-item">
+            <div>
+                <p>Prawn Curry</p>
+                <div class="quantity">
+                    <label for="qtyPrawnCurry">Qty:</label>
+                    <input type="number" min="0" value="0" id="quantityPrawnCurry">
+                    <label for="pPrawnCurry">Price:</label>
+                    <p class="price" id="pricePrawnCurry">₹0.00</p>
+                    <script>
+                        function PrawnCurryPrice(item, quantity) {
+                            const priceElement = document.getElementById(`price${item}`);
+                            const pricePerItem = 269.00; // You can set the price per item as needed
+                            const totalPrice = pricePerItem * quantity;
+                            priceElement.textContent = `₹${totalPrice.toFixed(2)}`;
+                        }
+                
+                        // Add event listener for quantity input changes
+                        document.getElementById('quantityPrawnCurry').addEventListener('input', function() {
+                            PrawnCurryPrice('PrawnCurry', this.value);
+                        });
+                    </script>
+                </div>
+            </div>
+            <img src="https://th.bing.com/th/id/OIG4.ebfTl9MnSFulSrpVT7Wy?pid=ImgGn" alt="Prawn Curry" style="width: 110px;border-radius: 10px;">
+        </div>
+    </section>
+<h2>Vegetarian</h2>
+<section>
+    <div class="menu-item">
+        <div>
+            <p>Panner Curry</p>
+            <div class="quantity">
+                <label for="qtyPannerCurry">Qty:</label>
+                <input type="number" min="0" value="0" id="quantityPannerCurry">
+                <label for="pPannerCurry">Price:</label>
+                <p class="price" id="pricePannerCurry">₹0.00</p>
+                <script>
+                    function PannerCurryPrice(item, quantity) {
+                        const priceElement = document.getElementById(`price${item}`);
+                        const pricePerItem = 249.00; // You can set the price per item as needed
+                        const totalPrice = pricePerItem * quantity;
+                        priceElement.textContent = `₹${totalPrice.toFixed(2)}`;
+                    }
+            
+                    // Add event listener for quantity input changes
+                    document.getElementById('quantityPannerCurry').addEventListener('input', function() {
+                        PrawnCurryPrice('PannerCurry', this.value);
+                    });
+                </script>
+            </div>
+        </div>
+        <img src="https://th.bing.com/th/id/OIG4.BqCn4iMJanuZahEwesE8?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Panner Curry" style="width: 110px;border-radius: 10px;">
+    </div>
+</section>
+<section>
+    <div class="menu-item">
+        <div>
+            <p>Cashew Panner Curry</p>
+            <div class="quantity">
+                <label for="qtyCashewPannerCurry">Qty:</label>
+                <input type="number" min="0" value="0" id="quantityCashewPannerCurry">
+                <label for="pCashewPannerCurry">Price:</label>
+                <p class="price" id="priceCashewPannerCurry">₹0.00</p>
+                <script>
+                    function CashewPannerCurryPrice(item, quantity) {
+                        const priceElement = document.getElementById(`price${item}`);
+                        const pricePerItem = 279.00; // You can set the price per item as needed
+                        const totalPrice = pricePerItem * quantity;
+                        priceElement.textContent = `₹${totalPrice.toFixed(2)}`;
+                    }
+            
+                    // Add event listener for quantity input changes
+                    document.getElementById('quantityCashewPannerCurry').addEventListener('input', function() {
+                        CashewPannerCurryPrice('CashewPannerCurry', this.value);
+                    });
+                </script>
+            </div>
+        </div>
+        <img src="https://th.bing.com/th/id/OIG2.BQXXDo9d5rhwAZmEPRAf?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Cashew Panner Curry" style="width: 110px;border-radius: 10px;">
+    </div>
+</section>
+<section>
+    <div class="menu-item">
+        <div>
+            <p>Mushroom Curry</p>
+            <div class="quantity">
+                <label for="qtyMushroomCurry">Qty:</label>
+                <input type="number" min="0" value="0" id="quantityMushroomCurry">
+                <label for="pMushroomCurry">Price:</label>
+                <p class="price" id="priceMushroomCurry">₹0.00</p>
+                <script>
+                    function MushroomCurryPrice(item, quantity) {
+                        const priceElement = document.getElementById(`price${item}`);
+                        const pricePerItem = 239.00; // You can set the price per item as needed
+                        const totalPrice = pricePerItem * quantity;
+                        priceElement.textContent = `₹${totalPrice.toFixed(2)}`;
+                    }
+            
+                    // Add event listener for quantity input changes
+                    document.getElementById('quantityMushroomCurry').addEventListener('input', function() {
+                        MushroomCurryPrice('MushroomCurry', this.value);
+                    });
+                </script>
+            </div>
+        </div>
+        <img src="https://th.bing.com/th/id/OIG1..DZkgG5DP9Ixkom5ENTp?pid=ImgGn" alt="Mushroom Curry" style="width: 110px;border-radius: 10px;">
+    </div>
+</section>
+</body>
+</html>
